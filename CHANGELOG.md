@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+
+- 新增 Docker 支持：`Dockerfile`（node 构建前端 + golang 以 `embedweb` 标签将前端内嵌进单二进制 + 精简 alpine 运行镜像）、`docker/config.toml`（镜像内置配置，默认开启局域网访问 `allow_lan_access = true`，并提供首次部署用默认账号 `denova` / `denova@123456`，请部署后尽快修改）、`.github/workflows/docker-release.yml`（打 `v*` 标签自动构建推送 Docker Hub 镜像并同时更新 `latest`）。
+- Added Docker support: a multi-stage `Dockerfile` (Node builds the frontend, Go embeds it into a single binary via the `embedweb` tag, and a slim Alpine runtime image), `docker/config.toml` (ships with LAN access enabled by default via `allow_lan_access = true` and a first-boot account `denova` / `denova@123456` — change it after deployment), and `.github/workflows/docker-release.yml` (pushes a Docker Hub image on every `v*` tag, also refreshing `latest`).
+
 ## [v0.3.3] - 2026-07-25
 
 ### Fixed

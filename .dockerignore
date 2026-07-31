@@ -1,0 +1,24 @@
+# Git
+.git
+.gitignore
+
+# 依赖与构建产物（构建阶段会重新生成，无需进入构建上下文）
+node_modules
+**/node_modules
+web/node_modules
+web/dist
+internal/webfs/dist
+output
+dist
+
+# 运行时数据
+.denova
+.nova
+log
+*.log
+nohup.out
+
+# 本地环境
+.idea
+.vscode
+*.local
